@@ -1,0 +1,28 @@
+.co2 {
+  font-size: 100px;
+  width: 5em;
+  height: 2em;
+  text-align: center;
+  padding: 0.5em 0;
+  box-sizing: border-box;
+}
+
+.best {
+  color: #006400
+}
+
+.good {
+  color: #228B22;
+}
+
+.normal {
+  color: #32CD32;
+}
+
+.bad {
+  color: #FFFF00;
+}
+
+.worst {
+  color: #FF0000;
+}

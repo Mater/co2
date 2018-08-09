@@ -1,0 +1,41 @@
+{
+  "name": "co2",
+  "version": "0.0.1",
+  "description": "CO2 sensor diagrams",
+  "author": "mater",
+  "private": true,
+  "main": "public/electron.js",
+  "dependencies": {
+    "@vx/curve": "0.0.165",
+    "@vx/scale": "0.0.165",
+    "@vx/shape": "0.0.168",
+    "d3-scale": "^2.1.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "serialport": "^6.2.0"
+  },
+  "scripts": {
+    "postinstall": "electron-rebuild",
+    "electron": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "lint": "eslint --fix ./src/"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.0",
+    "cross-env": "^5.2.0",
+    "electron": "^2.0.3",
+    "electron-is-dev": "^0.3.0",
+    "electron-rebuild": "^1.7.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.10.0",
+    "react-app-rewired": "^1.5.2",
+    "wait-on": "^2.1.0"
+  }
+}
