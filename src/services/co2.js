@@ -1,4 +1,5 @@
 import SerialPort from 'serialport';
+import beep from 'beeper';
 
 const READ_CO2_LEVEL = Buffer.from([0xff, 0x01, 0x86, 0x00, 0x00, 0x00, 0x00, 0x00, 0x79]);
 
@@ -36,6 +37,8 @@ export function openPort(portPath) {
   port = new SerialPort(portPath, {
     baudRate: 9600
   });
+
+  beep();
 
   return port;
 }
