@@ -5,7 +5,10 @@ import {
   closePort,
   readCo2Level
 } from '../../services/co2';
-import {co2LevelNames} from './constants';
+import {
+  setCo2Level as setCo2LevelAtTaskbar
+} from '../../services/indicator';
+import {co2LevelNames} from '../../constants';
 
 import Area from '../../components/Area';
 
@@ -119,6 +122,8 @@ class Co2 extends Component {
       availablePorts
     } = this.state;
     const levelName = co2LevelNames(co2Level);
+
+    setCo2LevelAtTaskbar(co2Level);
 
     return (
       <div>
