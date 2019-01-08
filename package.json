@@ -19,8 +19,8 @@
   },
   "scripts": {
     "postinstall": "electron-rebuild",
-    "electron": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
-    "start": "react-app-rewired start",
+    "electron": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3100 && electron .\"",
+    "start": "cross-env PORT=3100 react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "lint": "eslint --fix ./src/"
